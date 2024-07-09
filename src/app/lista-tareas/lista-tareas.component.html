@@ -1,0 +1,35 @@
+<section>
+  <app-agregar-tarea [agregarTareasRecibidas]="tareas"></app-agregar-tarea>
+</section>
+<section>
+  <table>
+    <thead>
+      <tr>
+        <th>No.</th>
+        <th>Tarea</th>
+        <th>Estado</th>
+        <th>Accion</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for(tarea of tareas; track $index){
+        <tr>
+          <td>
+              {{contador + $index}}
+          </td>
+          <td [class.completada]="tareaCompletada[$index]">
+            <span>{{tarea}}</span>
+          </td>
+          <td>
+            <button (click)="cambiarEstado($index)">Completada</button>
+          </td>
+          <td>
+            <app-eliminar-tarea [eliminarTareaRecibida]="tareas" [recibirIndex]="$index">
+
+            </app-eliminar-tarea>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</section>

@@ -1,0 +1,27 @@
+body {
+  background: #f0f4f8; /* Fondo minimalista con un color frío */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  text-align: center;
+  background: white; /* Fondo blanco para el contenido */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar el contenido */
+  border-radius: 8px;
+}
+
+h1 {
+  color: #283618; /* Color del texto del título */
+  margin-bottom: 20px;
+}
+
+app-lista-tareas {
+  display: block;
+  margin-top: 20px;
+}

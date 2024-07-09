@@ -1,0 +1,6 @@
+<section class="task-section">
+  <form (submit)="agregarTarea()" class="task-form input-group">
+    <input type="text" [(ngModel)]="nuevaTarea" name="nuevaTarea" placeholder="Agregar Tarea" class="task-input" id="input-field">
+    <button type="submit" class="task-button submit-button"><span>Agregar</span></button>
+  </form>
+</section>

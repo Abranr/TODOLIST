@@ -1,0 +1,55 @@
+
+/* Estilo para la sección que contiene el componente app-agregar-tarea */
+section:first-of-type {
+  margin-bottom: 20px;
+}
+
+/* Estilo para la tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: whitesmoke; /* Color de texto */
+}
+
+table thead th {
+  background-color: #606c38;
+  color: white;
+  padding: 10px;
+}
+
+table tbody td {
+  background-color: #283618;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+table tbody tr {
+  border-bottom: 1px solid #555;
+}
+
+table tbody tr:hover {
+  background-color: #5e503f;
+}
+
+button {
+  background-color: #fefae0;
+  border: 1px solid #ccc; /* Borde fino y claro */
+  color: black;
+  padding: 3px 8px; /* Padding reducido */
+  cursor: pointer;
+  border-radius: 30px; /* Radio del borde pequeño */
+  font-family: 'Arial', sans-serif; /* Fuente simple */
+  font-size: 14px; /* Tamaño de fuente pequeño */
+}
+
+button:hover {
+  background-color: #FF4500;
+  border-color: #aaa; /* Color del borde ligeramente más oscuro al pasar el cursor */
+}
+
+/* Estilo para la clase completada */
+.completada {
+  text-decoration: line-through;
+  color: #888;
+}
