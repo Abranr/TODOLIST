@@ -17,6 +17,7 @@ export class AgregarTareaComponent {
     if (this.nuevaTarea.trim() !== '') {
       this.agregarTareasRecibidas.push(this.nuevaTarea);
       this.nuevaTarea = '';
+      localStorage.setItem('tareas', JSON.stringify(this.agregarTareasRecibidas));
     }
   }
 }
