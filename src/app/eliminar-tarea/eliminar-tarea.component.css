@@ -9,7 +9,7 @@
 }
 
 .submit-button:hover {
-  background: linear-gradient(90deg, #FC466B, #3F5EFB);
+  background: linear-gradient(90deg, #82e28e, #a8ca10);
   cursor: pointer;
 }
 
@@ -20,7 +20,7 @@
 .submit-button span {
   font-weight: 800;
   letter-spacing: 2px;
-  background: linear-gradient(90deg, #FC466B, #3F5EFB);
+  background: linear-gradient(90deg, #b6dd4b, #3dcc9e, #2E2E2E);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: 0.3s;

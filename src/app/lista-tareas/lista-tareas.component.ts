@@ -11,42 +11,53 @@ import { DOCUMENT } from '@angular/common';
   styleUrl: './lista-tareas.component.css',
 })
 export class ListaTareasComponent {
-  
-  tareas: string[] = [];
 
-  // LocalStorage
-  constructor(@Inject(DOCUMENT) private document: Document) {
-    const localStorage = document.defaultView?.localStorage;
+   //Array
 
-    let datos = localStorage?.getItem("listado");
-    if (datos != null) {
-      let arreglo = JSON.parse(datos);
-      if (arreglo != null) {
-        this.tareas = arreglo;
-      }
-    }
+   tareas: string[] = [];
+   //LocalStorage
+
+   constructor(@Inject(DOCUMENT) private document: Document) {
+     const localStorage = document.defaultView?.localStorage;
+     this.tareas = [];
+
+     let datos = localStorage?.getItem('tareas');
+     if (datos != null) {
+       let arreglo = JSON.parse(datos);
+       if (arreglo != null) {
+         for(let tarea of arreglo){
+           this.tareas.push(tarea);
+         }
+
+       }
+     }
+   }
+
+ /*   actualizarLocalStorage() {
+     localStorage.setItem('listado', JSON.stringify(this.tareas));
+   } */
+
+   //contador
+   contador: number = 1;
+   //propiedad para cambiar el estado de la tarea
+   tareaCompletada: boolean[] = Array(this.tareas.length).fill(false);
+
+   agregarTarea(nuevaTarea: string){
+     this.tareas.push(nuevaTarea);
+     this.contador++;
+   }
+
+   //Metodo para cambiar estado
+   eliminarTarea(indice: number) {
+     this.tareas.splice(indice, 1);
+     this.tareaCompletada.splice(indice, 1);
+     /*  console.log(this.tareaCompletada); */
+   }
+
+   //Metodo para limpiar los datos y el local storage
+
+  cambiarEstado(indice:number){
+   this.tareaCompletada[indice]=!this.tareaCompletada[indice]
   }
+ }
 
-  actualizarLocalStorage() {
-    localStorage.setItem("listado", JSON.stringify(this.tareas));
-  }
-
-  // Contador
-  contador: number = 1;
-
-  // Propiedad para cambiar el estado de la tarea
-  tareaCompletada: boolean[] = Array(this.tareas.length).fill(false);
-
-  // Método para cambiar estado
-  cambiarEstado(index: number) {
-    this.tareaCompletada[index] = !this.tareaCompletada[index];
-    this.actualizarLocalStorage();
-  }
-
-  // Método para limpiar los datos y el local storage
-  limpiarDatos() {
-    this.tareas = [];
-    this.tareaCompletada = [];
-    this.actualizarLocalStorage();
-  }
-}

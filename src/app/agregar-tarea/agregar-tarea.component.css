@@ -18,7 +18,7 @@
 
 .submit-button:hover {
   transition: 0.3s;
-  background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+  background: linear-gradient(90deg, #88da9c 0%, #55f2dd 100%);
   cursor: pointer;
 }
 
@@ -29,7 +29,7 @@
 .submit-button span {
   font-weight: 800;
   letter-spacing: 2px;
-  background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+  background: linear-gradient(90deg, #87b477 0%, #edce50 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: background 0.3s, -webkit-text-fill-color 0.3s;
@@ -43,7 +43,7 @@
 
 
 #input-field {
-  background-color: #252422 ;
+  background-color: #283618;
   border-radius: 10px 0 0 10px;
   border: none;
   width: 300px;
@@ -54,5 +54,5 @@
 }
 
 ::placeholder {
-  color: rgb(184, 184, 184);
+  color: white;
 }
