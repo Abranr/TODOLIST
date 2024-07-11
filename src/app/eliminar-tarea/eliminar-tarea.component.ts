@@ -14,5 +14,6 @@ export class EliminarTareaComponent {
 //Metodo para eliminar tarea
 eliminrTarea(index: number){
   this.eliminarTareaRecibida.splice(index, 1);
+  localStorage.setItem('tareas', JSON.stringify(this.eliminarTareaRecibida));
 }
 }
